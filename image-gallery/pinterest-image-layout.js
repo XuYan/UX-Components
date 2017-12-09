@@ -39,10 +39,10 @@ let onImageLoaded = (function() {
     }
 
     function applyStyles(image, aspectRatio, x, y) {
+        image.style.position = "absolute";
         image.style.width = columnWidth + "px";
         image.style.height = columnWidth / aspectRatio + "px";
-        image.style.transform = "translateY(" + y + "px)";
-        // image.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+        image.style.transform = `translate(${x}px, ${y}px)`;
     }
 
 	return () => {
